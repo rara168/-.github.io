@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>លិខិតអញ្ជើញខួបកំណើត</title>
+    <style>
+        body {
+            font-family: 'Khmer OS', Arial, sans-serif;
+            background-color: #ffe6e6;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #d63384;
+        }
+        p {
+            font-size: 18px;
+        }
+        .map-container {
+            margin: 20px 0;
+        }
+        .rsvp, .bind-hands {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #d63384;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            margin: 10px;
+        }
+        .rsvp:hover, .bind-hands:hover {
+            background-color: #a62063;
+        }
+        #qr-code {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>សូមគោរពអញ្ជើញឯកឧត្តម លោកជំទាវលោក លោកស្រី អ្នកនាងកញ្ញាចូលរួមពិធីខួបកំណើត</h1>
+        <p><strong>ខ្ញុំបាទឈ្មោះវ៉ាន់ តារា</strong> មានកិត្តិយសគោរពអញ្ជើញឯកឧត្តម លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញាចូលរួមពិធីខួបកំណើត</p>
+        <p>🎂 អាយុ ២០ឆ្នាំ</p>
+        <p>📅 ថ្ងៃទី ៨ ខែមីនា ឆ្នាំ២០២៥</p>
+        <p>📍 ទីតាំង: រាជធានីភ្នំពេញ</p>
+
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/place/Hotel+Cambodiana/@11.5598617,104.9312924,17z/data=!3m1!4b1!4m9!3m8!1s0x310951348f58fad3:0x43155c323a7e53f5!5m2!4m1!1i2!8m2!3d11.5598565!4d104.9361633!16s%2Fm%2F0gls7n0?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
+                width="100%" 
+                height="250" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <button class="rsvp" onclick="confirmRSVP()">បញ្ជាក់ការចូលរួម</button>
+        <button class="bind-hands" onclick="showQRCode()">ចុចទីនេះបើសិនចងដៃ</button>
+
+        <div id="qr-code">
+            <p>ស្កេន QR Code ដើម្បីចងដៃ</p>
+            <img src="d:\របាយការណ៍\dara.jpg" alt="QR Code" width="200">
+        </div>
+    </div>
+
+    <script>
+        function confirmRSVP() {
+            let response = confirm("តើឯកឧត្តម លោកជំទាវលោក លោកស្រី អ្នកនាងកញ្ញានឹងចូលរួមខួបកំណើតរបស់ខ្ញុំដែរឬទេ?");
+            if (response) {
+                alert("សូមអរគុណ! ខ្ញុំបាទរីករាយស្វាគមន៍ឯកឧត្តម លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញានៅក្នុងការចូលរួមកម្មវិធីរបស់ខ្ញុំបាទ។");
+                window.location.href = "https://t.me/Da1ra9";
+            } else {
+                alert("សូមអរគុណចំពោះការឆ្លើយតប!");
+            }
+        }
+        
+        function showQRCode() {
+            document.getElementById('qr-code').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
